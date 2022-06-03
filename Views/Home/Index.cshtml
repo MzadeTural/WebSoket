@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        &nbsp;
+        <button class="btn btn-danger" id="status">offlline</button>
+    </div>
+    <div class="row" id="joinArea">
+        <div class="col-lg-6">
+            <form id="eneterGroupForm">
+                <div class="form-group">
+                    <input type="text" id="userName" value="" required class="form-control" />
+                </div>
+                <div class="form-group">
+                    <select id="group" class="form-control">
+                        <option value="group1">Grouop 1</option>
+                        <option value="group2">Group 2</option>
+                        <option value="group3">Group 3</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success">Join Group</button>
+            </form>
+
+        </div>
+
+
+    </div>
+    <div class="row d-none" id="messageArea">
+        <div class="col-lg-4">
+            <button id="leaveGroupButton" type="submit" class="btn btn-danger">Leave Group</button>
+            <form id="sendMessageForm">
+                <div class="form-group">
+                    <textarea class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Send Message</button>
+            </form>
+        </div>
+        <div class="col-lg-8">
+            <ul class="list-group-item-success" id="MessageBox">
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <ul id="messagesList"></ul>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script src="~/microsoft/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
